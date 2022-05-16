@@ -1,4 +1,163 @@
-<form>
-    <input >
+<!-- <!-- reactive forms -->
+<!-- 
+<div class="card">
 
-</form>
+  <mat-card class="cardt" >
+    <mat-card-header >
+      <mat-card-title>
+        Cadastro de questão
+      </mat-card-title>
+    </mat-card-header>
+    <mat-card-content >
+      <form action="#" (ngSubmit)="submit()" [formGroup]="personalData "id="form1">
+        <div class="grupo">
+          <mat-form-field appearance="fill">
+            <mat-label>Questão</mat-label>
+            <input type="text" matInput placeholder="Cadastre sua questão..." formControlName="questao">
+
+            <mat-error>
+              <span *ngIf="personalData.controls['questao'].getError('required')">
+                  Campo obigatório</span>
+              <span *ngIf="personalData.controls['questao'].getError('minlength')">
+                  Digite no mínimo 10 caracteres</span>
+          </mat-error>
+          </mat-form-field>
+          
+         </div> 
+  
+        <div class="grupo">
+          
+          <mat-form-field appearance="fill" >
+            <mat-label>Resposta 01</mat-label>
+            <input type="text" matInput placeholder="Cadastre sua questão..." formControlName="opcao1">
+
+            <mat-error>
+              <span *ngIf="personalData.controls['opcao1'].getError('required')">
+                  Campo obigatório</span>
+              <span *ngIf="personalData.controls['opcao1'].getError('minlength')">
+                  Digite no mínimo 3 caracteres</span>
+          </mat-error>
+          </mat-form-field>
+          <input type="radio" name="verdadeiro" >
+        </div>
+        
+        <div class="grupo" >
+          
+          <mat-form-field appearance="fill">
+            <mat-label>Resposta 02</mat-label>
+            <input type="text" matInput placeholder="Cadastre sua questão..." formControlName="opcao2">
+
+            <mat-error>
+              <span *ngIf="personalData.controls['opcao2'].getError('required')">
+                  Campo obigatório</span>
+              <span *ngIf="personalData.controls['opcao2'].getError('minlength')">
+                  Digite no mínimo 3 caracteres</span>
+          </mat-error>
+          </mat-form-field>
+          <input type="radio" name="verdadeiro" >
+        </div>
+
+        <div class="grupo" >
+          
+          <mat-form-field appearance="fill">
+            <mat-label>Resposta 03</mat-label>
+            <input type="text" matInput placeholder="Cadastre sua questão..." formControlName="opcao3">
+
+            <mat-error>
+              <span *ngIf="personalData.controls['opcao3'].getError('required')">
+                  Campo obigatório</span>
+              <span *ngIf="personalData.controls['opcao3'].getError('minlength')">
+                  Digite no mínimo 3 caracteres</span>
+          </mat-error>
+          </mat-form-field>
+          <input type="radio" name="verdadeiro" >
+          
+        </div>
+
+        <div class="grupo" >
+            
+          <mat-form-field appearance="fill">
+            <mat-label>Resposta 04</mat-label>
+            <input type="text" matInput placeholder="Cadastre sua questão..." formControlName="opcao4">
+            <mat-error>
+              <span *ngIf="personalData.controls['opcao4'].getError('required')">
+                  Campo obigatório</span>
+              <span *ngIf="personalData.controls['opcao4'].getError('minlength')">
+                  Digite no mínimo 2 caracteres</span>
+          </mat-error>
+
+          </mat-form-field>
+          <input type="radio" name="verdadeiro" >
+         
+        </div>
+       
+        <div class="grupo" >
+          
+          <mat-form-field appearance="fill">
+            <mat-label>Resposta 05</mat-label>
+            <input type="text" matInput placeholder="Cadastre sua questão..." formControlName="opcao5">
+            
+            <mat-error>
+              <span *ngIf="personalData.controls['opcao5'].getError('required')">
+                  Campo obigatório</span>
+              <span *ngIf="personalData.controls['opcao5'].getError('minlength')">
+                  Digite no mínimo 5 caracteres</span>
+          </mat-error>
+          </mat-form-field>
+          <input type="radio" name="verdadeiro" >
+          
+        </div>
+  
+       
+  
+        <div >
+          <button mat-raised-button type="submit" color="accent" class="btn" (click)="submit()">
+           
+        Cadastrar
+    </button>
+        </div>
+      </form>
+    </mat-card-content>
+  </mat-card>
+</div> -->
+
+
+<div>
+    <form [formGroup]="reactiveForm" (ngSubmit)="submit()" >
+ 
+        <p>
+          <label for="questao">Questao </label>
+          <input type="text" id="questao" name="questao" formControlName="questao">
+        </p>
+     
+        
+     
+        <div formGroupName="resposta">
+     
+          <p>
+            <label for="opcao1">opcao1</label>
+            <input type="text" name="opcao1" formControlName="opcao1">
+            <input type="radio" name="correta" formControlName="correta">
+          </p>
+          
+     
+      
+
+            <!-- <label for="correta">Correta</label> -->
+            <!-- <input type="radio" class="form-control" name="correta" formControlName="correta"> -->
+            
+
+            
+   
+     
+       
+     
+        </div>
+     
+        <button>Submit</button>
+     
+      </form>
+
+    
+</div>
+
