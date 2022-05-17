@@ -1,18 +1,19 @@
-<!-- <div class="container p-5">
+<div class="container p-5">
   <div class="row">
       <div class="col-sm-8 offset-2">
-          <p class="text-center">Questão {{ questaoAtual +1 }} / {{ questoes.length }}</p>
-          <h1> {{ questoes[questaoAtual].questao }}</h1>
+          <p class="text-center">Questão 1/10</p>
+          <h1> {{ prova[0].pergunta }}</h1>
 
-          <ul class="list-group" *ngFor="let questao of questoes[questaoAtual].resposta">
+         <ul class="list-group" *ngFor="let questao of prova[0].options">
               <label>
-              <li class="list-group-item"></li>
-                  <input type="radio" nome="opcoes" (change)="onAnswer(questao.correta)" [disabled]="answerSelected">
-                  {{ questao.opcao}}
+              <li class="list-group-item"> {{ prova[0].options }} </li>
+                  <input type="radio" nome="opcoes" >
+                  
+                  
               </label>
           </ul>
 
-         <!--  Corretas : {{ respostaCorreta }} | Incorretas: {{ repostaIncorreta }} -->
-   <!--    </div>
+         
+   </div>
   </div>
-</div>  -->-->
+</div> 

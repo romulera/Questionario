@@ -8,8 +8,8 @@ export class ProvaService {
   prova = [{
 
     pergunta: 'quanto é 1+3', 
-    participanAnswer: 0,
-    resposta: 1,
+    participanAnswer: "0",
+    resposta: "1",
     options: ["3", "4","6", "9", "15"]
   }, 
   ]
@@ -18,4 +18,8 @@ export class ProvaService {
   
 
   constructor() { }
+
+  getProvas(){
+    return this.prova
+  }
 }

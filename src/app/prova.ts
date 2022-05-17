@@ -1,5 +1,6 @@
-export interface Questao {
-    questao: string;
-    resposta: {opcao: string, correta: boolean} [];
-    respondido: boolean;
+export interface Prova {
+    pergunta: string; 
+    participanAnswer: string;
+    resposta: string;
+    options: Array<string>; 
 }

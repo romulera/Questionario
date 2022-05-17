@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Prova } from 'src/app/prova';
 import { ProvaService } from 'src/app/services/prova.service';
 
 
@@ -10,16 +11,18 @@ import { ProvaService } from 'src/app/services/prova.service';
 })
 export class TecnicoComponent implements OnInit {
 
-  
+  prova: Prova[] = [];
 
   
 
   constructor(
-    private prova: ProvaService
+    private provaService: ProvaService
 
   ) { }
 
   ngOnInit(): void {
+
+    this.prova = this.provaService.getProvas()
   }
 
 }
