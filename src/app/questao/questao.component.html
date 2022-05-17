@@ -1,14 +1,26 @@
-<div class="container p-5">
+<!-- responder teste logico candidato -->
+
+<div class="container pt-5">
     <div class="row">
-        <div class="col-sm-8 offset-2">
-            <p class="text-center">Questão {{ questaoAtual +1 }} / {{ questoes.length }}</p>
+        <div>
+            <h1>Etapa 1: Teste de Lógica</h1>
+        </div>
+        <div class=" pt-3">
+            <h5>Bem vindo(a) a primeira etapa do seu processo seletivo. Vamos realizar 
+                um teste de lógica (Definir texto real, esta é
+                apenas uma marcação)</h5>                
+        </div>
+    
+        <div class="col-sm-8 offset-2 pt-3">
+            <p class="text">Questão {{ questaoAtual +1 }} / {{ questoes.length }}</p>
             <h1> {{ questoes[questaoAtual].questao }}</h1>
 
-            <ul class="list-group" *ngFor="let questao of questoes[questaoAtual].resposta">
+            <ul class="list" *ngFor="let questao of questoes[questaoAtual].resposta">
                 <label>
-                <li class="list-group-item"></li>
-                    <input type="radio" nome="opcoes" (change)="onAnswer(questao.correta)" [disabled]="answerSelected">
-                    {{ questao.opcao}}
+                <li class="list-group-item -striped">
+                    <input type="radio" nome="opcoes" (change)="onAnswer(questao.correta)" [disabled]="answerSelected">{{ questao.opcao}}
+                </li>
+                    
                 </label>
             </ul>
 

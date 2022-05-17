@@ -16,7 +16,7 @@ export class QuestoeService {
         {opcao: 'Branco', correta: false},
       ], respondido: false
     }, {
-      questao: 'Chegou a pouco de fora ?', 
+      questao: 'Chegou agora ?', 
       resposta: [
         {opcao: 'Agora', correta: false},
         {opcao: 'Não', correta: false},
@@ -25,7 +25,7 @@ export class QuestoeService {
         {opcao: 'Prefiro nao dizer', correta: true},
       ], respondido: false
     },{
-      questao: 'Pizza é melhor que...?', 
+      questao: 'Qual sua comida preferida?', 
       resposta: [
         {opcao: 'Pastel', correta: false},
         {opcao: 'Salada', correta: false},
