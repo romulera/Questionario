@@ -8,8 +8,7 @@ import { FormControl, FormGroup, FormArray, Validators, FormBuilder } from '@ang
   styleUrls: ['./cadastro-questao.component.css']
 })
 export class CadastroQuestaoComponent implements OnInit {
-
-  
+ 
 
   personalData: FormGroup = new FormGroup({
     questao: new FormControl('', [Validators.required, Validators.minLength(10)]),
@@ -33,12 +32,6 @@ reactiveForm = new FormGroup({
     
   })
 
-
-
-
-
-
-
 submit(): void {
 
   console.log(`Questao= ${this.personalData.controls['questao'].value}`);  
@@ -52,17 +45,9 @@ submit(): void {
 
 }
 
-constructor(
-  
-  
-) { 
- 
-  
-
-  
+constructor() { 
+   
 }
-
-
 
 ngOnInit(): void {
   this.personalData.reset();
