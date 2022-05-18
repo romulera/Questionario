@@ -1,30 +1,42 @@
 <!-- responder teste logico candidato -->
 
-<div class="container pt-5">
-    <div class="row">
+<div class=" container bg-light" style="height: 100vh; width: 100vw; ">
+<div class="   p-5">
+    <div class="card bg-white p-5" >
         <div>
             <h1>Etapa 1: Teste de Lógica</h1>
         </div>
         <div class=" pt-3">
-            <h5>Bem vindo(a) a primeira etapa do seu processo seletivo. Vamos realizar 
+            <h3>Bem vindo(a) a primeira etapa do seu processo seletivo. Vamos realizar 
                 um teste de lógica (Definir texto real, esta é
-                apenas uma marcação)</h5>                
+                apenas uma marcação)</h3>                
         </div>
     
         <div class="col-sm-8 offset-2 pt-3">
-            <p class="text">Questão {{ questaoAtual +1 }} / {{ questoes.length }}</p>
+            <p class="text col-lg-2 pt-2 " style="border-top: 3px solid rgb(101, 153, 101) ;">Questão {{ questaoAtual +1 }} / {{ questoes.length }}</p>
             <h1> {{ questoes[questaoAtual].questao }}</h1>
 
-            <ul class="list" *ngFor="let questao of questoes[questaoAtual].resposta">
-                <label>
-                <li class="list-group-item -striped">
-                    <input type="radio" nome="opcoes" (change)="onAnswer(questao.correta)" [disabled]="answerSelected">{{ questao.opcao}}
-                </li>
-                    
-                </label>
+            <ul class="list " style="list-style: none;" *ngFor="let questao of questoes[questaoAtual].resposta">
+                
+              
+                    <input  style="transform:scale(1.3)" type="checkbox" nome="opcoes" (change)="onAnswer(questao.correta)" [disabled]="answerSelected">
+                    <label class="offset-1" >{{ questao.opcao}}</label>
+                
+               
             </ul>
 
             Corretas : {{ respostaCorreta }} | Incorretas: {{ repostaIncorreta }}
         </div>
     </div>
 </div>
+</div>
+
+
+<!-- <ul class="list " style="list-style: none;" *ngFor="let questao of questoes[questaoAtual].resposta">
+    <label>
+    <li   >
+        <input  style="transform:scale(1.3)" type="radio" nome="opcoes" (change)="onAnswer(questao.correta)" [disabled]="answerSelected"><span >{{ questao.opcao}}</span>
+    </li>
+        
+    </label>
+</ul> -->

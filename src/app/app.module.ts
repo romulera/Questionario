@@ -13,7 +13,7 @@ import { VideoComponent } from './components/video/video/video.component';
 import { LogicaComponent } from './components/teste/logica/logica.component';
 import { TecnicoComponent } from './components/teste/tecnico/tecnico.component';
 import { ProvaService } from './services/prova.service';
-import { BootstrapTesteComponent } from './bootstrap-teste/bootstrap-teste.component';
+
 
 
 @NgModule({
@@ -24,7 +24,7 @@ import { BootstrapTesteComponent } from './bootstrap-teste/bootstrap-teste.compo
     VideoComponent,
     LogicaComponent,
     TecnicoComponent,
-    BootstrapTesteComponent
+  
     
   ],
   imports: [

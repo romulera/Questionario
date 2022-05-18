@@ -10,7 +10,7 @@ export class QuestoeService {
       questao: 'Qual a cor do cavalo Branco de Napoleao ?', 
       resposta: [
         {opcao: 'Amarelo', correta: false},
-        {opcao: 'Verde', correta: false},
+        {opcao: 'Verde', correta: true},
         {opcao: 'Azul banana', correta: true},
         {opcao: 'Preto', correta: false},
         {opcao: 'Branco', correta: false},
