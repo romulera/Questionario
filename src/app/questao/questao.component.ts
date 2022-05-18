@@ -25,11 +25,6 @@ export class QuestaoComponent implements OnInit {
   //randomizando as questoes
  // randomize: number = 0;
 
-
-
-
-
-
   constructor(
     private questoresServices: QuestoeService
   ) { }
